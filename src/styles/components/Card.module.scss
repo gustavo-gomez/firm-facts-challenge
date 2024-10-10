@@ -1,9 +1,7 @@
 @import '../base/variables';
 
 .defaultVariant {
-  button{
-    transition: background-color 0.3s
-  }
+
   &:hover .innerContainer::before {
     background-color: $secondaryColor;
   }
@@ -11,6 +9,16 @@
   &:hover button {
     background-color: $secondaryColor;
     border: 1px solid $white;
+  }
+}
+
+.borderVariant {
+  &:hover .innerContainer::before {
+    border-color: $secondaryColor;
+  }
+
+  &:hover button {
+    background-color: $secondaryColor;
   }
 }
 
@@ -35,7 +43,6 @@
   height: 100%;
   position: relative;
   justify-content: center;
-  //transition: background-color 6s;
 }
 
 .ContendCentered {
@@ -56,17 +63,6 @@
   right: 0;
   bottom: 0;
   border: 8px solid transparent;
-  //transition: border-color 0.3s, background-color 6s;
-  transition: border-color 0.3s;
+  transition: border-color 0.4s, background-color 0.4s;
   pointer-events: none;
-}
-
-.borderVariant {
-  &:hover .innerContainer::before {
-    border-color: $secondaryColor;
-  }
-
-  &:hover button {
-    background-color: $secondaryColor;
-  }
 }

@@ -1,7 +1,7 @@
 import styles from "../../styles/components/FirmFactsModal.module.scss";
 import Card from "../card/Card";
 
-const FirmFactsModal = ({variant}) => {
+const FirmFactsModal = () => {
   return (
     <div className={styles.modalContainer}>
       <div className={styles.modalHeader}>
@@ -14,7 +14,7 @@ const FirmFactsModal = ({variant}) => {
         <Card variant={'default'} buttonVariant='icon'/>
         <Card variant={'default'} buttonVariant='icon'/>
         <Card variant={'default'} buttonVariant='default'/>
-        <Card variant={'default'} buttonVariant='icon' />
+        <Card variant={'default'} buttonVariant='icon'/>
         <Card variant={'border'} buttonVariant='icon'/>
         <Card variant={'border'} buttonVariant='icon' buttonDisabled/>
         <Card variant={'border'} buttonVariant='icon'/>
