@@ -1,0 +1,54 @@
+@import '../base/variables';
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 90%;
+  background: $primaryColor;
+  border-radius: 30px;
+  padding: 7px 15px;
+  cursor: pointer;
+  z-index: 100;
+  border: none;
+}
+
+.disabledButton {
+  background: $disabledColor !important;
+  cursor: not-allowed;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 25px;
+  margin-right: 10px;
+}
+
+.buttonText {
+  color: $white;
+  text-align: left;
+  font-size: 15px;
+}
+
+.buttonTextDefaultVariant {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  margin-left: 18px;
+}
+
+.buttonTextIconVariant {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 1024px) {
+  .buttonText {
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,72 @@
+@import '../base/variables';
+
+.defaultVariant {
+  button{
+    transition: background-color 0.3s
+  }
+  &:hover .innerContainer::before {
+    background-color: $secondaryColor;
+  }
+
+  &:hover button {
+    background-color: $secondaryColor;
+    border: 1px solid $white;
+  }
+}
+
+.cardContainer:first-child {
+  grid-row: span 2;
+}
+
+.cardContainer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  background: $white;
+  min-width: 100px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.innerContainer {
+  display: flex;
+  background: $white;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  justify-content: center;
+  //transition: background-color 6s;
+}
+
+.ContendCentered {
+  align-items: center;
+}
+
+.ContendNotCentered {
+  button {
+    margin-top: 30px;
+  }
+}
+
+.innerContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 8px solid transparent;
+  //transition: border-color 0.3s, background-color 6s;
+  transition: border-color 0.3s;
+  pointer-events: none;
+}
+
+.borderVariant {
+  &:hover .innerContainer::before {
+    border-color: $secondaryColor;
+  }
+
+  &:hover button {
+    background-color: $secondaryColor;
+  }
+}

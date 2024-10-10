@@ -1,0 +1,40 @@
+@import '../base/variables';
+
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+  min-width: 768px;
+  width: 100%;
+  max-width: 1680px;
+  background: $primaryColor;
+  color: $white;
+  margin-top: 100px;
+
+  .modalHeader {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $borderColor;
+    padding: 20px 30px 0 30px;
+
+    svg {
+      align-self: end;
+      cursor: pointer;
+    }
+
+    .title {
+      font-size: 35px;
+      font-weight: 500;
+      margin: 10px 0 20px 0;
+    }
+  }
+
+  .modalBody {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 30px;
+    height: 600px;
+    padding: 0 30px 20px 30px;
+  }
+}
